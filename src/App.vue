@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="min-h-screen bg-gray-100">
+    <!-- 상단 메뉴 -->
+    <header class="bg-gray-800 shadow">
+      <AppMenu />
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="container mx-auto p-4">
+      <router-view />
+    </main>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AppMenu from './components/menu/AppMenu.vue'; // 변경된 경로
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
+    AppMenu,
+  },
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+/* 추가적인 스타일이 필요하다면 여기에 작성 */
 </style>
